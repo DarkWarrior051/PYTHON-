@@ -1,0 +1,14 @@
+myList =[49,32,18,74,54,23,28]
+print(myList)
+myMax=myList[0]
+for i in myList:
+  if i>=myMax:
+    myMax= i 
+print "The maximum value is "+ str(myMax)
+myMin=myList[0]
+for i in myList:
+  if i<=myMin:
+    myMin= i 
+print "The minimum value is "+ str(myMin)
+myRange = myMax-myMin
+print "The range is " + str(myRange)
