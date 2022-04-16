@@ -1,0 +1,26 @@
+import random 
+compchoice= ["rock", "scissors", "paper"]
+computer= random.choice(compchoice)
+def RPS(Human):
+  myChoice=input("Pick Rock, Paper or Scissors")
+  myChoice= myChoice.lower()
+  print "You played "+myChoice+"."+"The computer played "+ computer +"."
+  if myChoice == computer:
+   return "Its a Tie"
+  if myChoice== "rock":
+    if computer== "scissors":
+      return "You win"
+    elif computer=="paper":
+      return "You lose"
+  if myChoice== "paper":
+    if computer== "rock":
+      return "You win"
+    elif computer=="scissors":
+      return "You lose"
+  if myChoice== "scissors":
+    if computer== "paper":
+      return "You win"
+    elif computer=="rock":
+      return "You lose"
+End= RPS("Rock")
+print(End)
