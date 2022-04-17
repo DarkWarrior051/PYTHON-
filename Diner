@@ -1,0 +1,126 @@
+myname = input("What is your first name?")
+myname1 = input("What is your last name?")
+print("Hey whats up "+ str(myname) + " "+ str( myname1) + ", how are you doing!!!!!!! ")
+feet = input("What is your height in feet?")
+feet1= int(feet)
+feet2 = (feet1 *12)
+Inches = input("How many inches more than that?")
+Inches1= int(Inches)
+heightInInches3 =(feet2 + Inches1)
+print("Your height of "+ str(feet) + " feet and " + str(Inches) + " inches is " + str(heightInInches3) + " inches." )
+num1 = input("Tell me a number?")
+num1= int(num1)
+num2 = (num1+2)
+num2= int(num2)
+num1= (num2*4)
+num2=(num1/2.8)
+num1=(num2-8)
+print("Num1 equals " + str(num1) + " and num2 equals " + str(num2))
+myBusiness=("Welcome to DarkWarrior051 Diner!")
+print(myBusiness)
+myBusiness1=input("What do you want? We have pancakes(1), chicken and waffles(2), and a chesseburger(3). If you dont want anything enter(0).")
+answer1=int(myBusiness1)
+if answer1 == 0:
+  x1=0
+  y1=("Nothing")
+  check = False
+  
+if answer1 == 1:
+  print ("That will be 5.95")
+  x1=5.95
+  y1=("Pancakes")
+  check = False
+
+if answer1 == 2:
+  print ("That will be 6.85")
+  x1=6.85
+  y1=("Chicken and Waffles")
+  check = False
+
+if answer1 == 3:
+  print("We actually have a discount on burgers today, so it is actually 4.95")
+  x1=4.95
+  y1=("Chesse burger")
+  check = False
+if answer1 >= 4:
+  print("We dont have that on our item ")
+  x1=0
+  y1=("Nothing")
+  check = False
+
+myBusiness2=input("What do you want for drinks? Soda(1), Tea(2), and Lemonade (3).If you dont want anything enter(0).")
+answer2=int(myBusiness2)
+if answer2 == 0:
+  x2=0
+  y2=("Nothing")
+  check = False
+  
+if answer2 == 1:
+  print ("That will be 1.85")
+  x2=1.85
+  y2=("Soda")
+  check = False
+
+if answer2 == 2:
+  print ("That will be 1.30")
+  x2=1.30
+  y2=("Tea")
+  check = False
+
+if answer2 == 3:
+  print("It will be 2.45")
+  x2=2.45
+  y2=("Lemonade")
+  check = False
+  
+if answer2 >= 4:
+  print("We dont have that on our item ")
+  x2=0
+  y2=("Nothing")
+  check = False
+  
+myBusiness3=input("We also have some desserts? Cookies(1), Ice cream(2), and Donuts(3).If you dont want anything enter(0).")
+answer3=int(myBusiness3)
+if answer3 == 0:
+  x3=0
+  y3=("Nothing")
+  check = False
+
+if answer3 == 1:
+  print ("That will be .85")
+  x3=.85
+  y3=("Cookies")
+  check = False
+
+if answer3 == 2:
+  print ("That will be 3.25")
+  x3=3.25
+  y3=("Ice Cream")
+  check = False
+
+if answer3 == 3:
+  print("That is 2.25")
+  x3=2.25
+  y3=("Donuts")
+  check = False
+  
+if answer3 >= 4:
+  print("We dont have that on our item ")
+  x3=0
+  y3=("Nothing")
+  check = False
+  
+total=(x1+x2+x3)
+print("Your bill")
+print("DarkWarrior051 Diner")
+print("Here is what you ordered "+str(y1)+", "+ str(y2)+",and "+str(y3))
+Debit =input("You owe me "+str(total)+" dollars. We accept payment in cash(1) or card(2). ")
+answer4=int(Debit)
+if answer4 == 1:
+  print ("That went through.")
+  check = False
+
+if answer4 == 2:
+  print ("Your credit card has been declined. Plaese pay with cash.")
+  check = False
+print("Thank you for eating at our restaurant")
