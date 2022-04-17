@@ -1,0 +1,26 @@
+def polysum(balance, annualInterestRate):
+    monthlyunpaidbalance = balance
+    updatedbalance = balance
+    minimumfixedmonthlypayment = 10
+    monthlyinterestrate = (annualInterestRate / 12)
+    monthlypaymentlowerbound = balance/12.0  
+    monthlypaymenthigherbound = (balance*(1+ monthlyinterestrate)**12)/12.0
+    minimumfixedmonthlypayment = (monthlypaymentlowerbound + monthlypaymenthigherbound)/2
+    while updatedbalance >= 0 or updatedbalance < -1:
+        monthlyunpaidbalance = balance
+        updatedbalance = balance
+        for i in range(12):
+            monthlyunpaidbalance =  (updatedbalance - minimumfixedmonthlypayment) 
+            monthlyinterest = monthlyinterestrate * monthlyunpaidbalance
+            updatedbalance = monthlyunpaidbalance + (monthlyinterest)
+            newupdatedbalance = updatedbalance 
+            i+= 1     
+        if newupdatedbalance <= 0 and newupdatedbalance > -1:
+            print(str("Lowest Payment: ")+ str(round(minimumfixedmonthlypayment,2)))
+            break
+        else:
+            if newupdatedbalance <= 0:
+                monthlypaymenthigherbound -= -1 * (newupdatedbalance/12)
+            else:    
+                monthlypaymentlowerbound += (newupdatedbalance/12)
+            minimumfixedmonthlypayment = (monthlypaymentlowerbound + monthlypaymenthigherbound)/2
