@@ -1,0 +1,41 @@
+def lyrics_to_frequencies(lyrics):
+    myDict = {}
+    for word in lyrics:
+        if word in myDict:
+            myDict[word] += 1
+        else:
+            myDict[word] = 1
+    return myDict
+she_loves_you = ['she', 'loves', 'you', 'yeah', 'yeah', 'yeah',
+'she', 'loves', 'you', 'yeah', 'yeah', 'yeah',                 
+'she', 'loves', 'you', 'yeah', 'yeah', 'yeah',
+
+'you', 'think', "you've", 'lost','your', 'love',
+'well', 'i', 'saw', 'her', 'yesterday-yi-yay',
+"it's", 'you', "she's", 'thinking', 'of',
+'and', 'she', 'told', 'me', 'what', 'to', 'say-yi-yay',
+
+'she', 'says', 'she', 'loves']
+def most_common_words(fregs):
+    values = fregs.values()
+    best = max(values)
+    words = []
+    for k in fregs:
+        if fregs[k] == best:
+            words.append(k)
+    return (words, best)
+def wordsoften(fregs, minTimes):
+    result = []
+    done = False
+    while not done:
+        temp = most_common_words(fregs)
+        if temp[1] >= 1:
+            result.append(temp)
+            for w in temp[0]:
+                del(fregs[w])
+            else:
+                done = True
+            return result
+        print(words_often(beatles,5))
+            
+    
